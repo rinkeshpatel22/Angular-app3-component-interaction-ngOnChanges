@@ -1,0 +1,12 @@
+<h4>This is Parent component (contact-list)</h4>
+
+<div><p>Parent Property: {{contactList | json}}</p></div>
+
+<div><p>Click below button to update the value from parent component, it will be detected in child component through OnChages() lifecycle hook.</p></div>
+
+<button (click)="updateFromParent()">Update value from Parent</button>
+
+<app-contact-update [contacts]="contactList" (onUpdated)="onContactUpdated($event)"></app-contact-update>
+
+
+
